@@ -6,7 +6,7 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Portfolio13() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Opportunities</p>
@@ -176,7 +176,7 @@ export function Portfolio13() {
           </article>
         </div>
         <div className="mt-12 flex justify-center md:mt-18 lg:mt-20">
-          <Button title="View all" variant="secondary" size="primary">
+          <Button className="amber-button rounded" title="View all" variant="secondary" size="primary">
             View all
           </Button>
         </div>

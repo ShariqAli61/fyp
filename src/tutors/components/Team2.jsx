@@ -2,12 +2,14 @@
 
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
-import { BiLogoDribbble, BiLogoLinkedinSquare } from "react-icons/bi";
+import { BiLogoDribbble, BiLogoLinkedinSquare, BiLogoFacebookCircle } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 export function Team2() {
+  const navigate = useNavigate();
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Tutors</p>
@@ -42,7 +44,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -70,7 +72,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -98,7 +100,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -126,7 +128,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -154,7 +156,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -182,7 +184,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -209,7 +211,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -239,7 +241,7 @@ export function Team2() {
                 <FaXTwitter className="size-6 p-0.5" />
               </a>
               <a href="#">
-                <BiLogoDribbble className="size-6" />
+                <BiLogoFacebookCircle className="size-6" />
               </a>
             </div>
           </div>
@@ -252,7 +254,7 @@ export function Team2() {
             Become a tutor and inspire the next generation.
           </p>
           <div className="mt-6 flex items-center justify-center gap-x-4 text-center md:mt-8">
-            <Button variant="secondary">Open positions</Button>
+            <Button className="amber-button" variant="secondary" onClick={() => navigate("/TutorRegistration")}>Open positions</Button>
           </div>
         </div>
       </div>

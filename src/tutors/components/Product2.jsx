@@ -5,11 +5,11 @@ import React from "react";
 
 export function Product2() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 grid grid-cols-1 items-end gap-12 md:mb-18 md:grid-cols-[1fr_max-content] lg:mb-20 lg:gap-20">
           <div className="max-w-lg">
-            <p className="mb-3 font-semibold md:mb-4">Tutors</p>
+            {/* <p className="mb-3 font-semibold md:mb-4">Tutors</p> */}
             <h1 className="mb-3 text-5xl font-bold md:mb-4 md:text-7xl lg:text-8xl">
               Tutors
             </h1>
@@ -18,7 +18,7 @@ export function Product2() {
             </p>
           </div>
           <div className="hidden md:flex">
-            <Button variant="secondary" size="primary" title="View all">
+            <Button className="amber-button" variant="secondary" size="primary" title="View all">
               View all
             </Button>
           </div>
@@ -43,7 +43,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>
@@ -67,7 +67,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>
@@ -91,7 +91,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>
@@ -115,7 +115,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>
@@ -139,7 +139,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>
@@ -163,7 +163,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>
@@ -187,7 +187,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>
@@ -211,7 +211,7 @@ export function Product2() {
               variant="secondary"
               size="sm"
               title="Add to cart"
-              className="mt-3 w-full md:mt-4"
+              className="amber-button mt-3 w-full md:mt-4"
             >
               Add to cart
             </Button>

@@ -7,7 +7,7 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Contact14() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="rb-12 mb-12 max-w-lg md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Connect</p>
@@ -29,7 +29,7 @@ export function Contact14() {
               </h3>
               <p className="mb-2">Reach us anytime at</p>
               <a className="underline" href="#">
-                hello@tutormatch.pk
+                tutormatch61@gmail.com
               </a>
             </div>
             <div>
@@ -41,7 +41,7 @@ export function Contact14() {
               </h3>
               <p className="mb-2">Call us at this number</p>
               <a className="underline" href="#">
-                +92 (21) 123-4567
+                +92 310-3239907
               </a>
             </div>
             <div>

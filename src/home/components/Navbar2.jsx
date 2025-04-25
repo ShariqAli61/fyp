@@ -48,8 +48,9 @@ export function Navbar2() {
 
   return (
     <section
-      id="relume"
-      className="flex w-full items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%]"
+      id="relume" 
+      // style={{ backgroundColor: "#f0e68c"}}
+      className=" navcolor flex w-full items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%]"
     >
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
@@ -122,17 +123,23 @@ export function Navbar2() {
           className="overflow-hidden px-[5%] text-center lg:flex lg:items-center lg:justify-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
           <Link
+            to="/"
+            className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
+          >
+            Home
+          </Link>
+          <Link
             to="/Tutor"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Find Tutors
           </Link>
-         
+
           <Link
             to="/Educators"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
-            For Educators
+            Find students
           </Link>
           {/* <a
             href="#"
@@ -141,12 +148,21 @@ export function Navbar2() {
             For Educators
           </a> */}
         
-          <a
-            href="#"
+        {/* <Link
+            to="/parentportal"
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Parent Portal
-          </a>
+          </Link> */}
+        {/* <Link
+            to="/student"
+            className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
+          >
+            student portal
+          </Link> */}
+
+          
+          
           <div
             onMouseEnter={useActive.openOnDesktopDropdownMenu}
             onMouseLeave={useActive.closeOnDesktopDropdownMenu}
@@ -184,7 +200,7 @@ export function Navbar2() {
                 initial="close"
                 exit="close"
                 transition={{ duration: 0.2 }}
-                className="bg-background-primary lg:absolute lg:z-50 lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
+                className="bg-amber-200 bg-background-primary lg:absolute lg:z-50 lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
               >
                 <Link
             to="/contact"
@@ -198,7 +214,20 @@ export function Navbar2() {
           >
             About Us
           </Link>
-                <a
+          <Link
+            to="/StudentRegistration"
+            className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
+          >
+            student Registration
+          </Link>
+          <Link
+            to="/TutorRegistration"
+            className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
+          >
+            Teacher Registration
+          </Link>
+          
+          <a
                   href="#"
                   className="block py-3 text-center lg:px-4 lg:py-2 lg:text-left"
                 >
@@ -215,13 +244,13 @@ export function Navbar2() {
           </div>
         </motion.div>
         <div className="hidden justify-self-end lg:block">
-        {/* <Button className="px-6 py-2 bg-red-400 " title="" size="sm" onClick={() => navigate("/Login")}>
+        <Button className="amber-button px-6 py-2" title="" size="sm" onClick={() => navigate("/Login")}>
             Login
-          </Button> */}
-          {/* <Link to="/Login" className="px-6 py-2 bg-red-400 " title="" size="sm"> Log In </Link> */}
-          <Button className="px-6 py-2 " title="" size="sm" onClick={() => navigate("/Signup")}>
-            Sign Up
           </Button>
+          {/* <Link to="/Login" className="px-6 py-2 bg-red-400 " title="" size="sm"> Log In </Link> */}
+          {/* <Button className="px-6 py-2 bg-amber-400  " title="" size="sm" onClick={() => navigate("/Signup")}>
+            Sign Up
+          </Button> */}
         </div>
       </div>
     </section>

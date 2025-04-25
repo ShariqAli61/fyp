@@ -5,7 +5,7 @@ import React from "react";
 
 export function Cta1() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
           <div>
@@ -17,8 +17,8 @@ export function Cta1() {
               teaching opportunities effortlessly.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-              <Button title="Sign Up">Sign Up</Button>
-              <Button title="Log In" variant="secondary">
+              <Button className="amber-button rounded" title="Sign Up">Sign Up</Button>
+              <Button className="amber-button rounded" title="Log In" variant="secondary">
                 Log In
               </Button>
             </div>

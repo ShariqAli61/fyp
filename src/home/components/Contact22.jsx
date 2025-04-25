@@ -5,7 +5,7 @@ import { BiEnvelope, BiMap, BiMessageDetail, BiPhone } from "react-icons/bi";
 
 export function Contact22() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid auto-cols-fr gap-x-8 gap-y-12 sm:gap-x-10 md:grid-cols-2 md:gap-y-16 lg:grid-cols-4">
           <div>

@@ -5,7 +5,7 @@ import React from "react";
 
 export function Cta27() {
   return (
-    <section id="relume" className="relative px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor  px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container relative z-10 max-w-lg text-center">
         <h2 className="rb-5 mb-5 text-5xl font-bold text-text-alternative md:mb-6 md:text-7xl lg:text-8xl">
           We're Here to Help You
@@ -15,8 +15,8 @@ export function Cta27() {
           you with the right tutor!
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
-          <Button title="Inquire">Inquire</Button>
-          <Button title="Get Started" variant="secondary-alt">
+          <Button className="amber-button" title="Inquire">Inquire</Button>
+          <Button className="amber-button" title="Get Started" variant="secondary-alt">
             Get Started
           </Button>
         </div>

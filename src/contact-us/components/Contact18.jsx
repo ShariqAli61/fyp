@@ -5,7 +5,7 @@ import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 
 export function Contact18() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid auto-cols-fr grid-cols-1 items-center gap-x-12 gap-y-12 md:grid-cols-3 md:gap-y-16">
           <div className="flex flex-col items-center justify-start text-center">
@@ -19,7 +19,7 @@ export function Contact18() {
               For inquiries, please reach out to us via email.
             </p>
             <a className="underline" href="#">
-              info@tutormatch.pk
+              tutormatch61@gmail.com  
             </a>
           </div>
           <div className="flex flex-col items-center justify-start text-center">
@@ -33,7 +33,7 @@ export function Contact18() {
               Call us for immediate assistance or support.
             </p>
             <a className="underline" href="#">
-              +92 (21) 123-4567
+              +92 310-3239907
             </a>
           </div>
           <div className="flex flex-col items-center justify-start text-center">

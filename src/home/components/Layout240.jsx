@@ -6,7 +6,7 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Layout240() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="rb-12 mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <h2 className="text-4xl font-bold leading-[1.2] md:text-5xl lg:text-6xl">
@@ -29,7 +29,7 @@ export function Layout240() {
               education accessible.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <Button className="cursor-pointer" iconRight={<RxChevronRight />} variant="link" size="link">
                 Learn More
               </Button>
             </div>
@@ -49,7 +49,7 @@ export function Layout240() {
               educators for better learning.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <Button className="cursor-pointer" iconRight={<RxChevronRight />} variant="link" size="link">
                 Sign Up
               </Button>
             </div>
@@ -69,7 +69,7 @@ export function Layout240() {
               your child.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <Button className="cursor-pointer" iconRight={<RxChevronRight />} variant="link" size="link">
                 Explore
               </Button>
             </div>

@@ -42,7 +42,7 @@ const useForm = () => {
 export default function Signup1() {
   const formState = useForm();
   return (
-    <section id="relume" className="px-[5%]">
+    <section id="relume" className="bodycolor px-[5%]">
       <div className="relative flex min-h-svh flex-col justify-center overflow-auto py-24 lg:pb-24 lg:pt-16">
         <div className="absolute left-0 right-0 top-0 flex h-16 items-center justify-between md:h-18">
           <a href="/">
@@ -54,22 +54,22 @@ export default function Signup1() {
             />
           </a>
           <div className="inline-flex gap-x-1">
-            <p className="hidden md:block">Already have an account?</p>
+            <p className="hidden md:block hidden md:block text-yellow-700">Already have an account?</p>
             {/* <a href="/Login" className="underline">
               Log In
             </a> */}
-            <Link to="/Login" className="underline"> Log In </Link>
+            <Link to="/login" className=" underline text-blue-700"> Login </Link>
             
 
           </div>
         </div>
         <div className="mx-auto w-full max-w-sm">
           <div className="rb-6 mb-6 text-center md:mb-8">
-            <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl text-yellow-700">
               Sign Up
             </h1>
-            <p className="md:text-md">
-              Lorem ipsum dolor sit amet adipiscing elit.
+            <p className="md:text-md text-yellow-700">
+            Signup your account to find the best tutors.
             </p>
           </div>
           <form
@@ -81,18 +81,23 @@ export default function Signup1() {
                 Name*
               </Label>
               <Input
+                placeholder="Name" 
+                className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 type="text"
                 id="name"
                 required={true}
                 value={formState.name}
                 onChange={formState.handleSetName}
               />
+              {/* <Input type="name" id="name" placeholder="Name" required className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-400"/> */}
             </div>
             <div className="grid grid-cols-1">
               <Label htmlFor="email" className="mb-2">
                 Email*
               </Label>
               <Input
+                placeholder="Email"
+                className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 type="email"
                 id="email"
                 required={true}
@@ -105,6 +110,8 @@ export default function Signup1() {
                 Password*
               </Label>
               <Input
+                placeholder="Password" 
+                className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 type="password"
                 id="password"
                 required={true}
@@ -113,9 +120,9 @@ export default function Signup1() {
               />
             </div>
             <div className="grid grid-cols-1 gap-4">
-              <Button title="Sign up">Sign up</Button>
+              <Button className="w-full bg-yellow-500 text-white p-3 mt-1 rounded-xl font-semibold hover:bg-yellow-600 transition duration-300 shadow-md" title="Sign up">Sign up</Button>
               <Button
-                className="gap-x-3"
+                className="w-full bg-yellow-500 text-white p-3 mt-1 rounded-xl font-semibold hover:bg-yellow-600 transition duration-300 shadow-md gap-x-3"
                 variant="secondary"
                 title="Sign up with Google"
                 iconLeft={<BiLogoGoogle className="size-6" />}
@@ -126,7 +133,7 @@ export default function Signup1() {
           </form>
         </div>
         <footer className="absolute bottom-0 left-0 right-0 flex h-16 items-center justify-center md:h-18">
-          <p className="text-sm">© 2024 Relume</p>
+          <p className="text-sm">© 2024 TutorMatch</p>
         </footer>
       </div>
     </section>

@@ -5,7 +5,7 @@ import React from "react";
 
 export function Contact10() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container grid grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
         <div>
           <img
@@ -52,7 +52,7 @@ export function Contact10() {
               </Label>
             </div>
             <div>
-              <Button title="Submit">Submit</Button>
+              <Button className="amber-button" title="Submit">Submit</Button>
             </div>
           </form>
         </div>

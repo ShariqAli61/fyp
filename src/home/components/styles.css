@@ -1,0 +1,30 @@
+.navcolor{
+    background-color: #f0e68c;
+}
+
+.bodycolor{
+    background: #fafad2;
+
+}
+
+/* .buttoncolor{
+    background: #fbbf24;
+
+} */
+
+
+/* styles.css */
+.amber-button {
+    background-color: #fcd34d; /* amber-300 */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 0.375rem;
+  }
+  
+  .amber-button:hover {
+    background-color: #fbbf24; /* amber-400 */
+  }
+
+
+
+

@@ -6,11 +6,11 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Layout239() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
-            <div className="w-full max-w-lg">
+            <div className="w-full ">
               <p className="mb-3 font-semibold md:mb-4">Find</p>
               <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
                 Discover Your Ideal Tutor Effortlessly
@@ -64,8 +64,8 @@ export function Layout239() {
             </div>
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-            <Button variant="secondary">Learn More</Button>
-            <Button iconRight={<RxChevronRight />} variant="link" size="link">
+            <Button className="amber-button" variant="secondary">Learn More</Button>
+            <Button className="cursor-pointer" iconRight={<RxChevronRight />} variant="link" size="link">
               Sign Up
             </Button>
           </div>

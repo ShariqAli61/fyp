@@ -7,6 +7,14 @@ import ContactPage from "./contact-us/Contact"
 import Signup1 from "./home/components/Signup1"
 import EducatorPage from "./for-educators/Educators";
 import { Login2 } from "./home/components/Login2";
+import ParentPage from "./parent-portal/ParentPortal";
+// import StudentDashboard from "./dashboard/student"
+// import TeacherDashboard from "./dashboard/Teacher";
+import TutorRegistration from "./dashboard/TutorRegistration";
+import StudentRegistration from "./dashboard/StudentRegistration";
+
+import StudentDashboard from "./dashboard/student";
+
 
 import { Navbar2 } from "./home/components/Navbar2";
 import { Header1 } from "./home/components/Header1";
@@ -31,7 +39,7 @@ export default function App() {
           path="/"
           element={
             <>
-            <Navbar2 />
+              <Navbar2 />
               <Header1 />
               <Layout101 />
               <Layout240 />
@@ -51,6 +59,13 @@ export default function App() {
         <Route path="/Signup" element={<Signup1 />} />
         <Route path="/educators" element={<EducatorPage />} />
         <Route path="/login" element={<Login2 />} />
+        <Route path="/parentportal" element={<ParentPage />} />
+        <Route path="/studentRegistration" element={<StudentRegistration />} />
+
+        <Route path="/studentRegistration/*" element={<StudentDashboard />} />
+
+        {/* <Route path="/Teacher" element={<TeacherDashboard />} /> */}
+        <Route path="/TutorRegistration" element={<TutorRegistration />} />
       </Routes>
     </Router>
   );

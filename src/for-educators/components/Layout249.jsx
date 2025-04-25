@@ -6,7 +6,7 @@ import { RxChevronRight } from "react-icons/rx";
 
 export function Layout249() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="w-full max-w-lg">
@@ -61,7 +61,7 @@ export function Layout249() {
           </div>
         </div>
         <div className="mt-10 flex items-center gap-4 md:mt-14 lg:mt-16">
-          <Button variant="secondary">Learn More</Button>
+          <Button className="amber-button rounded" variant="secondary">Learn More</Button>
           <Button iconRight={<RxChevronRight />} variant="link" size="link">
             Sign Up
           </Button>

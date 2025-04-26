@@ -3,7 +3,15 @@ import { FaMoon, FaSun, FaPalette } from "react-icons/fa";
 function TopBar({ setDarkMode, darkMode, setThemeColor, themeColor }) {
   return (
     <div className="flex justify-between items-center p-4 shadow-md">
-      <div className="text-xl font-bold">Student Dashboard</div>
+      {/* Empty div to balance the space on the left */}
+      <div className="w-10"></div>
+      
+      {/* Centered title */}
+      <div className="text-xl font-bold absolute left-1/2 transform -translate-x-1/2">
+        Student Dashboard
+      </div>
+      
+      {/* Icons on the right */}
       <div className="flex items-center space-x-4">
         <button onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? <FaSun size={24} /> : <FaMoon size={24} />}

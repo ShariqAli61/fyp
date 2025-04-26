@@ -29,7 +29,7 @@ const useForm = () => {
 export function Footer2() {
   const formState = useForm();
   return (
-    <footer id="relume" className="px-[5%] py-12 md:py-18 lg:py-20">
+    <footer id="relume" className="bodycolor px-[5%] py-12 md:py-18 lg:py-20">
       <div className="container">
         <div className="grid grid-cols-1 items-start gap-x-[8vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[1fr_0.5fr] lg:gap-y-4 lg:pb-20">
           <div className="grid grid-cols-1 items-start gap-x-8 gap-y-10 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 md:gap-x-8 lg:grid-cols-4">
@@ -150,7 +150,7 @@ export function Footer2() {
                   value={formState.email}
                   onChange={formState.handleSetEmail}
                 />
-                <Button title="Subscribe" variant="secondary" size="sm">
+                <Button className="amber-button" title="Subscribe" variant="secondary" size="sm">
                   Subscribe
                 </Button>
               </form>

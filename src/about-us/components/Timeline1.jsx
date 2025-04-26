@@ -27,7 +27,7 @@ const Circle = () => {
 
 export function Timeline1() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="relume" className="bodycolor px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="relative grid auto-cols-fr grid-cols-1 items-start justify-center gap-6 sm:gap-12 md:grid-cols-2 md:gap-24 lg:gap-32">
           <div className="relative top-0 z-10 md:sticky md:top-20 md:z-auto md:pr-4">
@@ -41,7 +41,7 @@ export function Timeline1() {
               families.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn More" variant="secondary">
+              <Button className="amber-button" title="Learn More" variant="secondary">
                 Learn More
               </Button>
               <Button
@@ -77,7 +77,7 @@ export function Timeline1() {
                   experience in mind.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Next" variant="secondary">
+                  <Button className="amber-button" title="Next" variant="secondary">
                     Next
                   </Button>
                   <Button
@@ -105,7 +105,7 @@ export function Timeline1() {
                   This allowed us to better serve the needs of our community.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Next" variant="secondary">
+                  <Button className="amber-button" title="Next" variant="secondary">
                     Next
                   </Button>
                   <Button
@@ -134,7 +134,7 @@ export function Timeline1() {
                   opportunities for students.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Next" variant="secondary">
+                  <Button className="amber-button" title="Next" variant="secondary">
                     Next
                   </Button>
                   <Button
@@ -163,7 +163,7 @@ export function Timeline1() {
                   best educators.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Join" variant="secondary">
+                  <Button className="amber-button" title="Join" variant="secondary">
                     Join
                   </Button>
                   <Button

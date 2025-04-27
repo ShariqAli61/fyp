@@ -1,15 +1,15 @@
 "use client";
 import { Link } from "react-router-dom";
-// import Login2 from "./Login2";
-
 import { Button, Input, Label } from "@relume_io/relume-ui";
 import React, { useState } from "react";
 import { BiLogoGoogle } from "react-icons/bi";
+import toast from 'react-hot-toast';  // Import toast
 
 const useForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // State for loading
 
   const handleSetName = (e) => {
     setName(e.target.value);
@@ -23,9 +23,38 @@ const useForm = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log({ name, email, password });
+    setIsLoading(true); // Start loading
+
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Signup failed!");
+      }
+
+      const data = await response.json();
+      console.log("Signup successful:", data);
+
+      // Success Toast
+      toast.success("Signup successful! 🎉");
+      
+      // Redirect to login page
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Error during signup:", error);
+      toast.error(error.message || "Something went wrong!"); // Error Toast
+    } finally {
+      setIsLoading(false); // Stop loading
+    }
   };
 
   return {
@@ -36,6 +65,7 @@ const useForm = () => {
     password,
     handleSetPassword,
     handleSubmit,
+    isLoading, // Returning the loading state
   };
 };
 
@@ -48,40 +78,32 @@ export default function Signup1() {
           <a href="/">
             <img
               src="src/assets/logo.png"
-              alt="Logo text" 
-              className="w-32 h-auto "
-              
+              alt="Logo text"
+              className="w-32 h-auto"
             />
           </a>
           <div className="inline-flex gap-x-1">
-            <p className="hidden md:block hidden md:block text-yellow-700">Already have an account?</p>
-            {/* <a href="/Login" className="underline">
-              Log In
-            </a> */}
-            <Link to="/login" className=" underline text-blue-700"> Login </Link>
-            
-
+            <p className="hidden md:block text-yellow-700">Already have an account?</p>
+            <Link to="/login" className="underline text-blue-700">Login</Link>
           </div>
         </div>
+
         <div className="mx-auto w-full max-w-sm">
           <div className="rb-6 mb-6 text-center md:mb-8">
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl text-yellow-700">
               Sign Up
             </h1>
             <p className="md:text-md text-yellow-700">
-            Signup your account to find the best tutors.
+              Signup your account to find the best tutors.
             </p>
           </div>
-          <form
-            className="grid grid-cols-1 gap-6"
-            onSubmit={formState.handleSubmit}
-          >
+          <form className="grid grid-cols-1 gap-6" onSubmit={formState.handleSubmit}>
             <div className="grid grid-cols-1">
               <Label htmlFor="name" className="mb-2">
                 Name*
               </Label>
               <Input
-                placeholder="Name" 
+                placeholder="Name"
                 className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 type="text"
                 id="name"
@@ -89,8 +111,8 @@ export default function Signup1() {
                 value={formState.name}
                 onChange={formState.handleSetName}
               />
-              {/* <Input type="name" id="name" placeholder="Name" required className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-400"/> */}
             </div>
+
             <div className="grid grid-cols-1">
               <Label htmlFor="email" className="mb-2">
                 Email*
@@ -105,12 +127,13 @@ export default function Signup1() {
                 onChange={formState.handleSetEmail}
               />
             </div>
+
             <div className="grid grid-cols-1">
               <Label htmlFor="password" className="mb-2">
                 Password*
               </Label>
               <Input
-                placeholder="Password" 
+                placeholder="Password"
                 className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 type="password"
                 id="password"
@@ -119,8 +142,17 @@ export default function Signup1() {
                 onChange={formState.handleSetPassword}
               />
             </div>
+
             <div className="grid grid-cols-1 gap-4">
-              <Button className="w-full bg-yellow-500 text-white p-3 mt-1 rounded-xl font-semibold hover:bg-yellow-600 transition duration-300 shadow-md" title="Sign up">Sign up</Button>
+              <Button
+                className={`w-full bg-yellow-500 text-white p-3 mt-1 rounded-xl font-semibold hover:bg-yellow-600 transition duration-300 shadow-md ${formState.isLoading ? 'opacity-50' : ''}`}
+                title="Sign up"
+                type="submit"
+                disabled={formState.isLoading}
+              >
+                {formState.isLoading ? "Signing Up..." : "Sign up"}
+              </Button>
+
               <Button
                 className="w-full bg-yellow-500 text-white p-3 mt-1 rounded-xl font-semibold hover:bg-yellow-600 transition duration-300 shadow-md gap-x-3"
                 variant="secondary"
@@ -132,6 +164,7 @@ export default function Signup1() {
             </div>
           </form>
         </div>
+
         <footer className="absolute bottom-0 left-0 right-0 flex h-16 items-center justify-center md:h-18">
           <p className="text-sm">© 2024 TutorMatch</p>
         </footer>

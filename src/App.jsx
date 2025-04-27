@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from 'react-hot-toast';  // Import Toaster
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import TutorPage from "./tutors/Tutor";
@@ -29,6 +30,7 @@ import { Footer2 } from "./home/components/Footer2";
 export default function App() {
   return (
     <Router>
+      <Toaster />  {/* This is necessary for toasts to appear */}
       {/* <Navbar2 /> */}
        {/* Navbar appears on all pages */}
 
